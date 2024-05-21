@@ -11,12 +11,10 @@ import torch.nn.functional as F
 from io import BytesIO
 from collections import deque
 
-
-path = "/Users/princemensah/Desktop/deep-learning-projects/cld-pred-deployment/"
-model = torch.load(join(path, "model/best_model_ResNeXt50_32X4D_10_epochs_fold_0.pt"), map_location=torch.device('cpu'))
+model = torch.load(join("model/best_model_ResNeXt50_32X4D_10_epochs_fold_0.pt"), map_location=torch.device('cpu'))
 
 # loading the class names
-class_indices = json.load(open(join(path, "app/labels.json")))
+class_indices = json.load(open(join("app/labels.json")))
 
 # Initialize session state for feedback and history
 if 'feedback' not in st.session_state:
