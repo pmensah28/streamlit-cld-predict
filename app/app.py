@@ -83,8 +83,6 @@ def display_history():
     for i, (image, prediction, confidence) in enumerate(st.session_state.history):
         st.sidebar.image(image, caption=f"Prediction {i+1}: {prediction} ({confidence:.2f}%)", use_column_width=True)
 
-
-
 # Streamlit App
 st.set_page_config(page_title='Plant Disease Classifier', layout='wide')
 st.title('Cassava Leaf Disease Classifier')
@@ -159,8 +157,7 @@ if st.session_state.feedback:
         st.sidebar.write(f"Feedback: {feedback}")
         st.sidebar.write("---")
 
-
-# Footer
+# Footer with badges
 st.markdown("""
     <style>
         footer {visibility: hidden;}
@@ -175,6 +172,34 @@ st.markdown("""
         }
     </style>
     <div class="footer">
-        <p>Powered by Streamlit</p>
+        <br />
+        <div align="center">
+            <a href="https://pmensah28.github.io/">
+                <img src="https://img.shields.io/badge/-Website-4B9AE5?style=flat&logo=Website&logoColor=white" alt="Website">
+            </a>
+            <a href="https://www.linkedin.com/in/prince-mensah/">
+                <img src="https://img.shields.io/badge/-LinkedIn-306EA8?style=flat&logo=Linkedin&logoColor=white" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/pmensah28">
+                <img src="https://img.shields.io/badge/-GitHub-2F2F2F?style=flat&logo=github&logoColor=white" alt="GitHub">
+            </a>
+            <a href="https://www.kaggle.com/pmensah1">
+                <img src="https://img.shields.io/badge/-Kaggle-5DB0DB?style=flat&logo=Kaggle&logoColor=white" alt="Kaggle">
+            </a>
+            <a href="mailto:pmensah@aimsammi.org">
+                <img src="https://img.shields.io/badge/-Email-676767?style=flat&logo=google-scholar&logoColor=white" alt="Email Me">
+            </a>
+            <a href="https://www.buymeacoffee.com/pmensah">
+                <img src="https://img.shields.io/badge/-Buy_me_a_tea-yellow?style=flat&logo=buymeacoffee&logoColor=white" alt="Buy me a tea">
+            </a>
+            <a href="https://github.com/pmensah28/github-profile-views-counter">
+                <img src="https://komarev.com/ghpvc/?username=pmensah28" alt="GitHub Profile Views">
+            </a>
+            <a href="https://github.com/pmensah28?tab=followers">
+                <img src="https://img.shields.io/github/followers/pmensah28?label=Followers&style=social" alt="GitHub Badge">
+            </a>
+        </div>
+            <br />
+         <p>Copyright © Prince Mensah 2024 - Powered by Streamlit</p>
     </div>
 """, unsafe_allow_html=True)
